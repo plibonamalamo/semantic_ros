@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<aiml>
+	<category>
+		<pattern>CIAO</pattern>
+		<template>
+			[SAY]
+			<random>
+				<li>Ciao! Come ti chiami?</li>
+				<li>Buongiorno! Come ti chiami?</li>
+			</random>
+		</template>
+	</category>
+	<category>
+		<pattern>*</pattern>
+		<that> _ CHIAMI</that>
+		<template>[SAY] Ciao <set name="user"><star/></set>!</template>
+	</category>
+	
+	<category>
+		<pattern>* SIAMO *</pattern>
+		<template>
+			<think>
+				<set name="posto"><star/></set>
+			</think>
+			[SAY] Ciao <get name="user"/>! OK Siamo in <get name="posto"/>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>* QUEST *</pattern>
+		<template>
+			<think>
+				<set name="posto"><star/></set>
+			</think>
+			[SAY] Ciao <get name="user"/>! OK Siamo in <get name="posto"/>
+		</template>
+	</category>
+
+	<category>
+		<pattern>* VAI *</pattern>
+		<template>
+			<think>
+				<set name="posto2"><star/></set>
+			</think>
+			[SAY] Ciao <get name="user"/>! OK Vado in <get name="posto2"/>
+		</template>
+	</category>
+
+	<category>
+		<pattern>*</pattern>
+		<template>
+			[SAY]
+			<random>
+				<li>Ripeti</li>
+				<li> <get name="user"/> Non ho capito</li>
+				<li>Puoi ripetere <get name="user"/> ?</li>
+			</random>
+		</template>
+	</category>
+</aiml>
+	
