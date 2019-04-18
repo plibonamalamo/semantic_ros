@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<aiml>
+	<category>
+		<pattern>CIAO</pattern>
+		<template>
+			[SAY]
+			<random>
+				<li>Ciao! Come ti chiami?</li>
+				<li>Buongiorno! Come ti chiami?</li>
+			</random>
+		</template>
+	</category>
+	<category>
+		<pattern>*</pattern>
+		<that> _ CHIAMI</that>
+		<template>[SAY] Ciao <set name="user"><star/></set>!</template>
+	</category>
+
+	<category>
+		<pattern> SIAMO IN *</pattern>
+		<template>
+			<think>
+				<set name="posto"><star/></set>
+			</think>
+			[SAY] OK <get name="user"/> Siamo in <get name="posto"/>
+		</template>
+	</category>
+	
+	<category>
+		<pattern> SIAMO NELL'*</pattern>
+		<template>
+			<think>
+				<set name="posto"><star/></set>
+			</think>
+			[SAY] OK <get name="user"/> Siamo nell'  <get name="posto"/>
+		</template>
+	</category>
+	
+    <category>
+		<pattern> SIAMO NELL '*</pattern>
+		<template>
+			<think>
+				<set name="posto"><star/></set>
+			</think>
+			[SAY] OK <get name="user"/> Siamo nell'  <get name="posto"/>
+		</template>
+	</category>
+	
+	<category>
+		<pattern> SIAMO NELL ' *</pattern>
+		<template>
+			<think>
+				<set name="posto"><star/></set>
+			</think>
+			[SAY] OK <get name="user"/> Siamo nell'  <get name="posto"/>
+		</template>
+	</category>
+
+	<category>
+		<pattern> SIAMO NELL' *</pattern>
+		<template>
+			<think>
+				<set name="posto"><star/></set>
+			</think>
+			[SAY] OK <get name="user"/> Siamo nell'  <get name="posto"/>
+		</template>
+	</category>
+
+	<category>
+		<pattern> SIAMO NELLA *</pattern>
+		<template>
+			<think>
+				<set name="posto"><star/></set>
+			</think>
+			[SAY] OK <get name="user"/> Siamo nella <get name="posto"/>
+		</template>
+	</category>
+
+	<category>
+		<pattern> SIAMO AL *</pattern>
+		<template>
+			<think>
+				<set name="posto"><star/></set>
+			</think>
+			[SAY] OK <get name="user"/> Siamo in <get name="posto"/>
+		</template>
+	</category>
+
+	<category>
+		<pattern> SIAMO NEL *</pattern>
+		<template>
+			<think>
+				<set name="posto"><star/></set>
+			</think>
+			[SAY] OK <get name="user"/> Siamo nel <get name="posto"/>
+		</template>
+	</category>
+
+	<category>
+		<pattern> SIAMO A *</pattern>
+		<template>
+			<think>
+				<set name="posto"><star/></set>
+			</think>
+			[SAY] OK <get name="user"/> Siamo in <get name="posto"/>
+		</template>
+	</category>
+
+	<category>
+		<pattern> SIAMO ALLA *</pattern>
+		<template>
+			<think>
+				<set name="posto"><star/></set>
+			</think>
+			[SAY] OK <get name="user"/> Siamo in <get name="posto"/>
+		</template>
+	</category>
+
+	<category>
+		<pattern> SIAMO DA *</pattern>
+		<template>
+			<think>
+				<set name="posto"><star/></set>
+			</think>
+			[SAY] OK <get name="user"/> Siamo da <get name="posto"/>
+		</template>
+	</category>
+
+	<category>
+		<pattern> QUESTO È IL *</pattern>
+		<template>
+			<think>
+				<set name="posto"><star/></set>
+			</think>
+			[SAY] OK <get name="user"/> Siamo in <get name="posto"/>
+		</template>
+	</category>
+
+	<category>
+		<pattern> QUESTO È LO *</pattern>
+		<template>
+			<think>
+				<set name="posto"><star/></set>
+			</think>
+			[SAY] OK <get name="user"/> Siamo in <get name="posto"/>
+		</template>
+	</category>
+
+	<category>
+		<pattern> QUESTA È LA *</pattern>
+		<template>
+			<think>
+				<set name="posto"><star/></set>
+			</think>
+			[SAY] OK <get name="user"/> Siamo in <get name="posto"/>
+		</template>
+	</category>
+
+	<category>
+		<pattern> VAI IN *</pattern>
+		<template>
+			<think>
+				<set name="posto2"><star/></set>
+			</think>
+			[SAY] OK <get name="user"/> Vado in <get name="posto2"/>
+		</template>
+	</category>
+	
+	<category>
+		<pattern> VAI NEL *</pattern>
+		<template>
+			<think>
+				<set name="posto2"><star/></set>
+			</think>
+			[SAY] OK <get name="user"/> Vado in <get name="posto2"/>
+		</template>
+	</category>
+
+	<category>
+		<pattern> VAI NELLA *</pattern>
+		<template>
+			<think>
+				<set name="posto2"><star/></set>
+			</think>
+			[SAY] OK <get name="user"/> Vado nella <get name="posto2"/>
+		</template>
+	</category>
+
+	<category>
+		<pattern> VAI AL *</pattern>
+		<template>
+			<think>
+				<set name="posto2"><star/></set>
+			</think>
+			[SAY] OK <get name="user"/> Vado in <get name="posto2"/>
+		</template>
+	</category>
+
+	<category>
+		<pattern> VAI NELL *</pattern>
+		<template>
+			<think>
+				<set name="posto2"><star/></set>
+			</think>
+			[SAY] OK <get name="user"/> Vado in <get name="posto2"/>
+		</template>
+	</category>
+
+	<category>
+		<pattern> VAI NELL' *</pattern>
+		<template>
+			<think>
+				<set name="posto2"><star/></set>
+			</think>
+			[SAY] OK <get name="user"/> Vado nell'  <get name="posto2"/>
+		</template>
+	</category>
+
+	<category>
+		<pattern> VAI A *</pattern>
+		<template>
+			<think>
+				<set name="posto2"><star/></set>
+			</think>
+			[SAY] OK <get name="user"/> Vado in <get name="posto2"/>
+		</template>
+	</category>
+	
+	<category>
+		<pattern> VAI ALLA *</pattern>
+		<template>
+			<think>
+				<set name="posto2"><star/></set>
+			</think>
+			[SAY] OK <get name="user"/> Vado in <get name="posto2"/>
+		</template>
+	</category>
+
+	<category>
+		<pattern> VAI DA *</pattern>
+		<template>
+			<think>
+				<set name="posto2"><star/></set>
+			</think>
+			[SAY] OK <get name="user"/> Vado da <get name="posto2"/>
+		</template>
+	</category>
+
+	<category>
+		<pattern> VAI *</pattern>
+		<template>
+			<think>
+				<set name="posto2"><star/></set>
+			</think>
+			[SAY] OK <get name="user"/> Vado in <get name="posto2"/>
+		</template>
+	</category>
+
+	<category>
+		<pattern>*</pattern>
+		<template>
+			[SAY]
+			<random>
+				<li>Ripeti</li>
+				<li> <get name="user"/> Non ho capito</li>
+				<li>Puoi ripetere <get name="user"/> ?</li>
+			</random>
+		</template>
+	</category>
+</aiml>
+	
