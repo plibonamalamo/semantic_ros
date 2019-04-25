@@ -1,0 +1,2 @@
+semantic_alone
+-DCATKIN_DEVEL_PREFIX=/home/ubuntu/TESI/devel -DCMAKE_INSTALL_PREFIX=/home/ubuntu/TESI/install -G Unix Makefiles

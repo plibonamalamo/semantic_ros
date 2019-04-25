@@ -1,0 +1,3 @@
+<launch>
+	<node pkg="semantic" type="semantic" name="semantic" launch-prefix="valgrind" />	
+</launch>
