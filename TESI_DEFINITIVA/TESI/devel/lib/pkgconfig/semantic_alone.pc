@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/TESI/devel
+
+Name: semantic_alone
+Description: Description of semantic_alone
+Version: 0.0.0
+Cflags: -I/home/ubuntu/TESI/src/semantic_alone/include
+Libs: -L/home/ubuntu/TESI/devel/lib 
+Requires: 
