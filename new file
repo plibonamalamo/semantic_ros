@@ -1,0 +1,23 @@
+rostopic pub /diago/move_base_simple/goal geometry_msgs/PoseStamped '{ header: { frame_id: "/map" }, pose: { position: { x: 1.25, y: 2 }, orientation: { x: 0, y: 0, z: 0, w: 1 } } }'
+
+
+
+java -Xmx1G -jar lu4r-server-0.2.4.jar -c simple -l en -o  cfr -p 9001
+rosrun android_interface android_interface_node.py _port:=9090
+rosrun lu4r_ros lu4r_ros_node.py _lu4r_ip:=127.0.0.1 _lu4r_port:=9001
+rosrun aiml_ros1 aiml_ros_node.py _aiml_path:=KB/en
+
+~/src/stage_environments/scripts$ ./start_simulation.py
+rosrun semantic semantic
+
+rosbag record /odom /scan /tf -o mybag
+
+rosparam set use_sim_time true
+rosrun gmapping slam_gmapping scan:=base_scan _odom_frame:=odom_combined
+rosrun tf static_transform_publisher 0 0 0 0 0 0 /tf /base_link 100
+rosrun map_server map_saver -f <map_name>
+
+rosrun srrg_pioneer pioneer_robot_node _command_vel_topic:=/joystick_cmd_vel _serial_device:= 
+rosrun gradient_based_navigation joystick_control
+rosrun srrg_joystick 
+rosrun tf static_transform_publisher 0 0 0 0 0 0 /tf /  100
